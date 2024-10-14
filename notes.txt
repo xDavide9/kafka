@@ -1,0 +1,30 @@
+https://kafka.apache.org/
+https://kafka.apache.org/documentation/#quickstart
+
+kafka is a distributed event streaming platform
+it can be used as a message queue like RabbitMQ, to build real-time event-driven applications or data-integration applications
+
+it runs as a cluster, is fault-tolerant and horizontally scalable
+it's horizontally scalable meaning you can add more brokers to the cluster to increase throughput
+it's fault-tolerant meaning it can tolerate broker failures
+a kafka broker is a component of the cluster that receives, stores, and serves messages in kafka topics (collections of events)
+a topic is a category/feed name to which records are sent by producers
+these messages can be stored in different partitions across multiple brokers
+
+in the ecosystem there is a component called kafka connect that can be used to connect kafka to other systems (e.g. relational databases, apis, etc)
+kafka connect has both sources and sinks (from where it pulls/pushes data)
+there is also kafka streams that can be used to process messages in real-time (e.g. filtering, aggregating, data enrichment, etc)
+
+in this demo it's used as a message queue
+it has producers (e.g. microservices) send messages to brokers (e.g. kafka servers) and consumers (e.g. microservices, grafana, logstash, hadoop...)
+read messages from brokers
+in contrast to a traditional message queue, kafka is highly available, durable, and has high throughput
+its messages are durable meaning they are not disposed immediately after being consumed but rather follow a specific retention policy
+
+configuration is available both as scripts or in @Configuration classes using @Beans
+
+in production always use a managed solution like the one provided by AWS and so on...
+
+
+
+
